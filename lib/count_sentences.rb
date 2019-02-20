@@ -27,12 +27,8 @@ class String
   end
 
   def count_sentences
-    string_array = self.split(".", "?", "!")
-    puts string_array
-    binding.pry
+    string_array = self.split(/[.?!]\s/)
+    string_array.length
   end
 end
 
-"This, well, is a sentence. This is too!! And so is this, I think? Woo..." = String.new 
-
-"This, well, is a sentence. This is too!! And so is this, I think? Woo...".count_sentences 
